@@ -1,0 +1,109 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+  body {
+    display: flex;
+    padding: 0 20px;
+    min-height: 100vh;
+    align-items: center;
+    background: linear-gradient(120deg, #ad92df, #fda085);
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .wrapper {
+    height: 400px; /* Increased height */
+    width: 90%; /* Adjusted width */
+    max-width: 600px; /* Set maximum width */
+    background: #f3efef;
+    border-radius: 10px;
+    padding: 25px;
+    transition: height 0.2s ease;
+    box-shadow: 0 0 20px rgba(19, 18, 18, 0.1);
+    margin: auto; /* Center the box horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  
+  .wrapper.active {
+    height: 500px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0e0e;
+  }
+  
+  header p {
+    margin-top: 5px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .form input,
+  .form button {
+    width: calc(100% - 40px);
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    padding: 0 20px;
+  }
+  
+  .form input {
+    font-size: 18px;
+    background: #f0f0f0;
+    color: #0f0f0f;
+  }
+  
+  .form input::placeholder {
+    color: #999;
+  }
+  
+  .form button {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(120deg, #df639d, #ff8e8e);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+  }
+  
+  .form button:hover {
+    background: linear-gradient(120deg, #ff8e8e, #ff6b6b);
+  }
+  
+  .qr-code {
+    opacity: 0;
+    display: flex;
+    padding: 25px 0;
+    border-radius: 10px;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    border: 2px dashed #ccc;
+  }
+  
+  .wrapper.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+  }
+  
+  .qr-code img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
