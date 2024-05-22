@@ -22,3 +22,5 @@ qrInput.addEventListener("keyup", () => {
     preValue = "";
   }
 });
+
+
